@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "");
+	cout << "Выберите операцию: \n";
+	cout << "[1] Складывать				| + \n";
+	cout << "[2] Вычитать				| - \n";
+	cout << "[3] Умножать				| * \n";
+	cout << "[4] Делить				| / \n";
+	cout << "[5] Делить с остатком			| % \n";
+	int operation = 0;
+	cin >> operation;
+	cout << "Введите первое число: \n";
+	float firstdigit = 0;
+	cin >> firstdigit;
+	cout << "Введите второе число: \n";
+	float seconddigit = 0;
+	cin >> seconddigit;
+	
+	if (operation == 1) {
+		float sum = 0;
+		sum = firstdigit + seconddigit;
+		cout << "Сумма ваших чисел = " << sum << "\n";
+
+	}
+	else if (operation == 2) {
+		float minus = 0;
+		minus = firstdigit - seconddigit;
+		cout << "Разность ваших чисел = " << minus << "\n";
+	}
+	else if (operation == 3) {
+		float umnozh = 0;
+		umnozh = firstdigit * seconddigit;
+		cout << "Произведение ваших чисел = " << umnozh << "\n";
+	}
+	else if (operation == 4) {
+		float delenie = 0;
+		if (seconddigit != 0) {
+			delenie = firstdigit / seconddigit;
+			cout << "Частное ваших чисел = " << delenie << "\n";
+		}
+		else {
+			cout << "На ноль делить нельзя!!!! \n";
+		}
+	}
+	else if (operation == 5) {
+		float delost = 0;
+		if (seconddigit != 0) {
+			delost = (int)firstdigit % (int)seconddigit;
+			cout << "Остаток при делении от ваших чисел = " << delost << "\n";
+		}
+		else {
+			cout << "На ноль делить нельзя!!!! \n";
+		}
+		int _;
+		cin >> _;
+	}
+	}
